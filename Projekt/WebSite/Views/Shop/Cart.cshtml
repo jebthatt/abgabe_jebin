@@ -1,0 +1,16 @@
+﻿@model List<WebSite.Models.Article>
+@using WebSite.Models
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>Cart</h2>
+
+<body>
+    @foreach(Article a in Model)
+    {
+        @a.Name; 
+    }
+</body>
+

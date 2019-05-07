@@ -1,0 +1,47 @@
+﻿@model List<WebSite.Models.Article>
+@using WebSite.Models;
+@{
+    ViewBag.Title = "Necklaces";
+}
+
+<p>m</p>
+<p>m</p>
+<p>m</p>
+<p>m</p>
+
+<img alt="Logo" src="\img\necklaces.jpg" height="100%" width="100%" / >
+
+@if (@Model != null)
+{
+    <div class="clearfix">
+
+        @foreach (Article b in Model)
+        {
+            <table>
+                <tr>
+                    <td>
+                        <p><img src="@b.ImgPath" height=300 width=300 /></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>@b.Name</p>
+                    </td>
+                <tr>
+                    <td>
+                        <p>@b.Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>@b.Price €</p>
+                    </td>
+                </tr>
+            </table>
+            //<button value="Add to Basket" onclick="@Session[@a.ID]"></button>
+        }
+    </div>
+}
+
+

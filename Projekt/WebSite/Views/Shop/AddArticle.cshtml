@@ -1,0 +1,36 @@
+﻿@model WebSite.Models.Article   
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AddArticle</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>Name:</p>
+        @Html.TextBoxFor(a => a.Name);
+        <br />
+        <p>Description:</p>
+        @Html.TextAreaFor(a => a.Description);
+        <br />
+        <p>ImgPath:</p>
+        @Html.TextBoxFor(a => a.ImgPath);
+        <br />
+        <p>Price:</p>
+        @Html.TextBoxFor(a => a.Price);
+        <br />
+        <p>Kategorie:</p>
+        @Html.EnumDropDownListFor(a => a.Kategorien);
+
+        <input type="submit" value="Artikel hinzufügen" />
+
+
+    }
+</body>
+</html>
+
